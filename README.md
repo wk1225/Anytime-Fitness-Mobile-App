@@ -7,7 +7,6 @@ The **Anytime Fitness Mobile App** is a Python-based management system designed 
 
 ## 2. Objectives
 The objectives of this project are:
-- To design an intuitive interface for fitness scheduling using `tkcalendar`.
 - To implement scientifically grounded progress tracking using **MET (Metabolic Equivalent of Task)** values.
 - To practice modular programming by separating page logic into specialized Python files.
 - To handle local data persistence using Tab-Separated Values (TSV) in `.txt` files.
@@ -20,7 +19,6 @@ The objectives of this project are:
 - **CustomTkinter** – Modernized Graphical User Interface (GUI).
 - **pygame (mixer)** – Specialized audio engine for feedback and "Easter Eggs."
 - **Pillow (PIL)** – Image processing for application icons and assets.
-- **tkcalendar** – Interactive date and calendar selection logic.
 - **TSV (Flat-File Storage)** – Lightweight local data management.
 
 ---
@@ -106,5 +104,6 @@ This project demonstrates a fully functional, multi-page fitness ecosystem. It s
 - Cloud Integration: Syncing user_info.txt to an online database (Firebase/SQL).
 - Visualization: Adding Matplotlib charts to the Report page for visual progress.
 - Social Features: Ability to share workout plans with other local users.
+
 
 
