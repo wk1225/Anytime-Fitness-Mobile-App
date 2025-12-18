@@ -1,7 +1,7 @@
 # 🏋️ Anytime Fitness Desktop App
 
 ## 1. Introduction
-The **Anytime Fitness Desktop App** is a Python-based management system designed to help users architect weekly workout plans, log real-time exercise performance, and track progress via caloric burn analysis. Built with a modern dark-themed GUI, it simplifies the transition from paper-based logging to a digital fitness dashboard.
+The **Anytime Fitness Mobile App** is a Python-based management system designed to help users architect workout plans, log real-time exercise performance, and track progress via caloric burn analysis. Built with a modern light-themed GUI, it simplifies the transition from paper-based logging to a digital fitness dashboard.
 
 ---
 
@@ -16,7 +16,7 @@ The objectives of this project are:
 ---
 
 ## 3. Technologies Used
-- **Python 3.8+**
+- **Python 3.13+**
 - **CustomTkinter** – Modernized Graphical User Interface (GUI).
 - **pygame (mixer)** – Specialized audio engine for feedback and "Easter Eggs."
 - **Pillow (PIL)** – Image processing for application icons and assets.
@@ -28,7 +28,7 @@ The objectives of this project are:
 ## 4. System Features
 - **User Authentication**: Secure Sign-up/Login with user-specific session data.
 - **Workout Planning**: Schedule specific body-part exercises for any date.
-- **Dynamic Logging**: Record duration and intensity (Low/Medium/High) for various activities.
+- **Dynamic Logging**: Record duration and intensity for various activities.
 - **Intelligent Reporting**: 
     - Automatic calorie calculation based on intensity multipliers.
     - Comparison popups to visualize progress trends.
@@ -106,4 +106,5 @@ This project demonstrates a fully functional, multi-page fitness ecosystem. It s
 - Cloud Integration: Syncing user_info.txt to an online database (Firebase/SQL).
 - Visualization: Adding Matplotlib charts to the Report page for visual progress.
 - Social Features: Ability to share workout plans with other local users.
+
 
