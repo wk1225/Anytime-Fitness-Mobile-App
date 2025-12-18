@@ -3,10 +3,7 @@ import tkinter as tk
 from tkinter import PhotoImage, ttk
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from tkcalendar import DateEntry
-from datetime import datetime
 import pygame
-import sys
 
 # ------------------ Plan Page ------------------
 class PlanPage(tk.Frame):
@@ -19,6 +16,7 @@ class PlanPage(tk.Frame):
         self.other_photo=[] #used for storing png
         self.buttons = {}
         self.confirm_exercise =[]
+
         pygame.mixer.init()
         self.hamgaling = pygame.mixer.Sound("audio/miaumiau.MP3")
         self.omg = pygame.mixer.Sound("audio/omg.MP3")
@@ -47,7 +45,6 @@ class PlanPage(tk.Frame):
             "Believe, then achieve.",
             ]
 
-
         self.all_exercises = [
             "Arm Beginner","Arm Intermediate","Arm Advanced",
             "Abs Beginner","Belly Fat burner HIIT Beginner","Abs Intermediate","Abs Advanced",
@@ -56,6 +53,7 @@ class PlanPage(tk.Frame):
             ,"Back Advanced","Fat Burning HIIT"
             ,"Killer Core HIIT Beginner","Lose Fat(No Jumping!)"
         ]
+        
         self.day = [
             "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",
         ]
@@ -83,6 +81,7 @@ class PlanPage(tk.Frame):
         self.backImg =["Back Beginner","Back Intermediate","Back Advanced"]
         self.back_img =["image/back1.png","image/back2.png","image/back3.png"]
 
+        #plan page 其他function
         self.img_other =["image/other_0.png","image/record_0.png"]
         self.other_fun =[self.other_exercise,self.daily_plan]
 
@@ -109,6 +108,7 @@ class PlanPage(tk.Frame):
     def play_sound_bruh(self):
         self.bruh.play()
 
+    # top der button
     def create_top_buttons(self):
         self.subpage1 = tk.Frame(self, bg="#EEEEEE")
         self.subpage1.pack(fill="x", side="top")
@@ -118,6 +118,7 @@ class PlanPage(tk.Frame):
             plan_but.pack(pady=10,side="left",padx=8,anchor="center",expand=True)
             self.buttons[name]=plan_but
 
+    #换button 的样子和frame der content
     def show_content(self, name):
         for btn_name, btn in self.buttons.items():
             if btn_name == name:
@@ -293,6 +294,7 @@ class PlanPage(tk.Frame):
             label.pack_propagate(False)
             label.bind("<Button-1>", lambda e, func=self.other_fun[i]: func())
 
+    # pop up msg (date)
     def ask_for_date(self,name):
         ask_date = tk.Toplevel(self)
         ask_date.title("Message")
@@ -339,6 +341,7 @@ class PlanPage(tk.Frame):
         ask_date.focus_set()
         ask_date.transient(self)
     
+    # pop up msg (any content)
     def show_center_msg(self, msg):
         popup = tk.Toplevel(self)
         popup.title("Message")
@@ -367,6 +370,7 @@ class PlanPage(tk.Frame):
         popup.focus_set()
         popup.transient(self)
 
+    # pop up msg (error)
     def error_msg(self, msg):
         popup = tk.Toplevel(self)
         popup.title("Error!!")
@@ -601,6 +605,7 @@ class PlanPage(tk.Frame):
             self.confirm_exercise.append(name)
         self.refresh_manage_entries()
 
+    # back function
     def go_back_to_plan(self):
     #used for jump back to Plan page
 
@@ -619,6 +624,7 @@ class PlanPage(tk.Frame):
 
         self.show_content("Arm")
 
+    # edit plan 里面的 back function
     def back_to_plan(self):
     #used for jump back to Plan page(For edit page only)
 
